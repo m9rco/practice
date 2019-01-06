@@ -1,19 +1,18 @@
-<table width="0">
-    <colgroup>
-        <col style="width: 70px;"/>
-        <col style="width: 1194px;"/>
-    </colgroup>
-    <tbody>
-        <tr style="height: 40px;" class="firstRow">
-            <td style="font-size: 14px; color: rgb(57, 57, 57); border-color: rgb(167, 167, 167); overflow: hidden; overflow-wrap: break-word; white-space: pre-wrap;">
-              都撒到
-     
-            </td>
-            <td style="font-size: 14px; color: rgb(57, 57, 57); border-color: rgb(167, 167, 167); overflow: hidden; overflow-wrap: break-word; white-space: pre-wrap;">
-           
-    都撒到手
-           
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div style="width: 100%;display: flex;">
+    <div style="width: 30%;height: 100%;">
+        <div style="height: 70%;background: red;">
+            # 总结
+        </div>
+        <div style="height: 30%;background: green;">
+            # 关键词
+        </div>
+    </div>
+    <div style="width: 70%;height: 100%;">
+        <div style="height: 70%;background: yellow;">
+            # 记录笔记区域
+        </div>
+        <div style="height: 30%;background: black;">
+            # 反思与疑惑
+        </div>
+    </div>
+</div>

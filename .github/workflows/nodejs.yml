@@ -24,7 +24,6 @@ jobs:
       run: |
         git config --global user.name 'pushaowei'
         git config --global user.email 'pushaowei0727@gmail.com'
-        sed -i "s/GITHUB_ACCESS_TOKEN/$GITHUB_ACCESS_TOKEN/g" ./_config.yml
 
     - name: VuePress
       run: |
@@ -37,4 +36,4 @@ jobs:
         cd dist/
         git add -A
         git commit -m "$(curl -s whatthecommit.com/index.txt)"
-        git push -f git@github.com:m9-lab/m9-lab.github.io.git master
+        git push -f $GITHUB_ACCESS_TOKEN@github.com:m9-lab/m9-lab.github.io.git master

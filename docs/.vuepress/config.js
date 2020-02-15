@@ -6,7 +6,7 @@ module.exports = ctx => ({
     '/': {
       lang: 'zh-CN',
       title: 'Practice',
-      description: 's后端架构师的自我练习'
+      description: '后端架构师的自我练习'
     },
     '/en/': {
       lang: 'English',
@@ -26,7 +26,7 @@ module.exports = ctx => ({
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
   themeConfig: {
-    repo: 'm9-lab/m9-lab.github.io',
+    repo: 'm9rco/practice',
     docsRepo: 'm9-lab/m9-lab.github.io',
     docsBranch: 'master',
     editLinks: true,

@@ -39,7 +39,7 @@ function integrateGitalk(router) {
       repo: 'practice',
       owner: 'm9rco',
       admin: ['m9rco'],
-      id: 'comment',
+      id: location.pathname,
       distractionFreeMode: false,
       language: 'zh-CN',
     });

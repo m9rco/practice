@@ -6,7 +6,7 @@ module.exports = ctx => ({
     '/': {
       lang: 'zh-CN',
       title: 'Practice',
-      description: '后端架构师的自我练习'
+      description: '后端架构师的自我修行'
     },
     '/en/': {
       lang: 'English',
@@ -45,10 +45,9 @@ module.exports = ctx => ({
         lastUpdated: '上次更新',
         nav: require('./nav/zh'),
         sidebar: {
-          '/zh/api/': getApiSidebar(),
           '/zh/guide/': getGuideSidebar('指南', '深入'),
-          '/zh/plugin/': getPluginSidebar('插件', '介绍', '官方插件'),
-          '/zh/theme/': getThemeSidebar('主题', '介绍')
+          '/zh/db/': getDbSidebar('关系型数据库','非关系型数据库','列数据库','文档型数据库','图数据库'),
+          '/zh/os/': ['','computer']
         }
       },
       '/en': {
@@ -91,10 +90,46 @@ module.exports = ctx => ({
   ]
 })
 
-function getApiSidebar () {
+function getDbSidebar (groupA, groupB, groupC, groupD,groupE) {
   return [
-    'cli',
-    'node'
+    {
+      title: groupA,
+      collapsable: false,
+      children: [
+        'mysql',
+        'postgreSQL',
+      ]
+    },
+    {
+      title: groupB,
+      collapsable: false,
+      children: [
+        'mongodb',
+        'redis',
+      ]
+    },
+    {
+      title: groupC,
+      collapsable: false,
+      children: [
+        'hbase',
+        'clickhouse',
+      ]
+    },
+    {
+      title: groupD,
+      collapsable: false,
+      children: [
+        'mongodb',
+      ]
+    },
+    {
+      title: groupE,
+      collapsable: false,
+      children: [
+        'neo4j',
+      ]
+    }
   ]
 }
 
@@ -105,24 +140,6 @@ function getGuideSidebar (groupA, groupB) {
       collapsable: false,
       children: [
         '',
-        'getting-started',
-        'directory-structure',
-        'basic-config',
-        'assets',
-        'markdown',
-        'using-vue',
-        'i18n',
-        'deploy'
-      ]
-    },
-    {
-      title: groupB,
-      collapsable: false,
-      children: [
-        'frontmatter',
-        'permalinks',
-        'markdown-slot',
-        'global-computed'
       ]
     }
   ]

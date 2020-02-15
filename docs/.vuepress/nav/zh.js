@@ -12,16 +12,16 @@ module.exports = [
     link: '/zh/os/'
   },
   {
+    text: '编程语言',
+    link: '/zh/program/'
+  },
+  {
     text: '分布式设计',
     link: '/zh/distributed/'
   },
   {
     text: 'DevOPS',
     link: '/zh/devops/'
-  },
-   {
-    text: 'Leetcode',
-    link: '/zh/leetcode/'
   },
   {
     text: '通用基础',
@@ -37,6 +37,10 @@ module.exports = [
           {
             text: '基本算法',
             link: '/zh/structures-algorithm/algorithm.html'
+          },
+          {
+            text: 'Leetcode',
+            link: '/zh/leetcode/'
           }
         ]
       },

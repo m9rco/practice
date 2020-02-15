@@ -16,3 +16,7 @@
         </div>
     </div>
 </div>
+
+
+
+error Code snippet path not found: /Users/pushaowei/note/@vuepress/markdown/__tests__/fragments/snippet.js

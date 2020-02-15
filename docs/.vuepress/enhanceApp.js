@@ -36,7 +36,7 @@ function integrateGitalk(router) {
     const gitalk = new Gitalk({
       clientID: '5e01d05713fb81675776',
       clientSecret: '599d38643f2c2fb15438c137f345a03fcb244b50',
-      repo: 'm9-lab.github.io',
+      repo: 'practice',
       owner: 'm9rco',
       admin: ['m9rco'],
       id: 'comment',

@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Download Source file
+      uses: actions/checkout@v2
+      with:
+        ref: master 
     - name: Prepare Node env
       uses: actions/setup-node@v1
       with:

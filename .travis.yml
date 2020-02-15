@@ -11,6 +11,7 @@ deploy:
   local_dir: dist
   github_token: $GITHUB_TOKEN 
   keep_history: true
+  repo: m9-lab/m9-lab.github.io
   name: $GIT_NAME
   email: $GIT_EMAIL
   on:

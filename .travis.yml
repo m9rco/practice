@@ -16,5 +16,6 @@ deploy:
   repo: m9-lab/m9-lab.github.io
   name: $GIT_NAME
   email: $GIT_EMAIL
+  fqdn: 'practice.0x06.cn'
   on:
     branch: master

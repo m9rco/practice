@@ -27,8 +27,7 @@ jobs:
 
     - name: VuePress
       run: |
-        npm i -g yarn
-        ls -l && pwd
+        ls -l
         yarn && yarn build
         
     - name: Deploy

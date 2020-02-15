@@ -1,0 +1,40 @@
+name: Node.js CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+    steps:
+    - name: Prepare Node env
+      uses: actions/setup-node@v1
+      with:
+        node-version: "10.x"
+
+    - name: Set env
+      env: 
+        GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}  
+      run: |
+        git config --global user.name 'pushaowei'
+        git config --global user.email 'pushaowei0727@gmai.com'
+        sed -i "s/GITHUB_ACCESS_TOKEN/$GITHUB_ACCESS_TOKEN/g" ./_config.yml
+
+    - name: VuePress
+      run: |
+        npm i -g yarn
+        yarn
+        yarn build
+        
+    - name: Deploy
+      run: |
+        cd dist/
+        git add -A
+        git commit -m "$(curl -s whatthecommit.com/index.txt)"
+        git push -f git@github.com:m9-lab/m9-lab.github.io.git master
+
+        

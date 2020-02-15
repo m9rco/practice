@@ -6,7 +6,7 @@ module.exports = ctx => ({
     '/': {
       lang: 'zh-CN',
       title: 'Practice',
-      description: '后端架构师的自我修行'
+      description: '服务端架构师的自我修行'
     },
     '/en/': {
       lang: 'English',

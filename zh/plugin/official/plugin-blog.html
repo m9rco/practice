@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>博客插件 | VuePress</title>
+    <meta name="description" content="s后端架构师的自我练习">
+    <meta name="generator" content="VuePress 1.3.0">
+    <link rel="icon" href="/logo.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.a479ca9d.css" as="style"><link rel="preload" href="/assets/js/app.39c74953.js" as="script"><link rel="preload" href="/assets/js/5.696c01fa.js" as="script"><link rel="preload" href="/assets/js/36.1376cb54.js" as="script"><link rel="prefetch" href="/assets/js/10.25b2dc04.js"><link rel="prefetch" href="/assets/js/11.de513620.js"><link rel="prefetch" href="/assets/js/12.20d44d7b.js"><link rel="prefetch" href="/assets/js/13.fd678c64.js"><link rel="prefetch" href="/assets/js/14.bcd4dc1c.js"><link rel="prefetch" href="/assets/js/15.187ea0e3.js"><link rel="prefetch" href="/assets/js/16.03f00949.js"><link rel="prefetch" href="/assets/js/17.4b440b55.js"><link rel="prefetch" href="/assets/js/18.3cbb3f71.js"><link rel="prefetch" href="/assets/js/19.20a1f7fc.js"><link rel="prefetch" href="/assets/js/20.df76828e.js"><link rel="prefetch" href="/assets/js/21.2481844e.js"><link rel="prefetch" href="/assets/js/22.894feda1.js"><link rel="prefetch" href="/assets/js/23.ca173608.js"><link rel="prefetch" href="/assets/js/24.15625f26.js"><link rel="prefetch" href="/assets/js/25.36d3f075.js"><link rel="prefetch" href="/assets/js/26.a697eb90.js"><link rel="prefetch" href="/assets/js/27.b5fdd752.js"><link rel="prefetch" href="/assets/js/28.40ed215a.js"><link rel="prefetch" href="/assets/js/29.03681b90.js"><link rel="prefetch" href="/assets/js/30.0202a343.js"><link rel="prefetch" href="/assets/js/31.adf7057c.js"><link rel="prefetch" href="/assets/js/32.20b6f898.js"><link rel="prefetch" href="/assets/js/33.ca18847d.js"><link rel="prefetch" href="/assets/js/34.b61730f8.js"><link rel="prefetch" href="/assets/js/35.62e4925d.js"><link rel="prefetch" href="/assets/js/37.80d96b74.js"><link rel="prefetch" href="/assets/js/38.57161872.js"><link rel="prefetch" href="/assets/js/39.18261626.js"><link rel="prefetch" href="/assets/js/40.51e65093.js"><link rel="prefetch" href="/assets/js/41.920d6500.js"><link rel="prefetch" href="/assets/js/42.854f21d5.js"><link rel="prefetch" href="/assets/js/43.0744b68d.js"><link rel="prefetch" href="/assets/js/44.9c68aad4.js"><link rel="prefetch" href="/assets/js/45.943fb881.js"><link rel="prefetch" href="/assets/js/46.f59cf106.js"><link rel="prefetch" href="/assets/js/47.acc9dc24.js"><link rel="prefetch" href="/assets/js/6.9090b3fc.js"><link rel="prefetch" href="/assets/js/7.0696725a.js"><link rel="prefetch" href="/assets/js/8.0ef043ad.js"><link rel="prefetch" href="/assets/js/9.cfdfd6ec.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.b5c6983c.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.54d14e41.js"><link rel="prefetch" href="/assets/js/vendors~notification.942c8d9c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a479ca9d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Practice</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/zh/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/zh/db/" class="nav-link">
+  数据库
+</a></div><div class="nav-item"><a href="/zh/os/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/zh/distributed/" class="nav-link">
+  分布式设计
+</a></div><div class="nav-item"><a href="/zh/devops/" class="nav-link">
+  DevOPS
+</a></div><div class="nav-item"><a href="/zh/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="通用基础" class="dropdown-title"><span class="title">通用基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          算法 &amp; 数据结构
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zh/structures-algorithm/structures.html" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-subitem"><a href="/zh/structures-algorithm/algorithm.html" class="nav-link">
+  基本算法
+</a></li></ul></li><li class="dropdown-item"><h4>
+          网络安全
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zh/structures-algorithm/structures.html" class="nav-link">
+  WEB 安全
+</a></li><li class="dropdown-subitem"><a href="/zh/structures-algorithm/algorithm.html" class="nav-link">
+  服务器安全
+</a></li><li class="dropdown-subitem"><a href="/zh/structures-algorithm/algorithm.html" class="nav-link">
+  序列化漏洞
+</a></li><li class="dropdown-subitem"><a href="/zh/structures-algorithm/algorithm.html" class="nav-link">
+  加密解密
+</a></li><li class="dropdown-subitem"><a href="/zh/structures-algorithm/algorithm.html" class="nav-link">
+  网络隔离
+</a></li></ul></li><li class="dropdown-item"><h4>
+          设计思路
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zh/structures-algorithm/structures.html" class="nav-link">
+  并发问题
+</a></li><li class="dropdown-subitem"><a href="/zh/structures-algorithm/algorithm.html" class="nav-link">
+  限流熔断
+</a></li><li class="dropdown-subitem"><a href="/zh/structures-algorithm/algorithm.html" class="nav-link">
+  海量搜索
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="选择语言" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/plugin/official/plugin-blog.html" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/en/" class="nav-link">
+  English
+</a></li></ul></div></div> <a href="https://github.com/m9-lab/m9-lab.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/zh/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/zh/db/" class="nav-link">
+  数据库
+</a></div><div class="nav-item"><a href="/zh/os/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/zh/distributed/" class="nav-link">
+  分布式设计
+</a></div><div class="nav-item"><a href="/zh/devops/" class="nav-link">
+  DevOPS
+</a></div><div class="nav-item"><a href="/zh/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="通用基础" class="dropdown-title"><span class="title">通用基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          算法 &amp; 数据结构
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zh/structures-algorithm/structures.html" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-subitem"><a href="/zh/structures-algorithm/algorithm.html" class="nav-link">
+  基本算法
+</a></li></ul></li><li class="dropdown-item"><h4>
+          网络安全
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zh/structures-algorithm/structures.html" class="nav-link">
+  WEB 安全
+</a></li><li class="dropdown-subitem"><a href="/zh/structures-algorithm/algorithm.html" class="nav-link">
+  服务器安全
+</a></li><li class="dropdown-subitem"><a href="/zh/structures-algorithm/algorithm.html" class="nav-link">
+  序列化漏洞
+</a></li><li class="dropdown-subitem"><a href="/zh/structures-algorithm/algorithm.html" class="nav-link">
+  加密解密
+</a></li><li class="dropdown-subitem"><a href="/zh/structures-algorithm/algorithm.html" class="nav-link">
+  网络隔离
+</a></li></ul></li><li class="dropdown-item"><h4>
+          设计思路
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zh/structures-algorithm/structures.html" class="nav-link">
+  并发问题
+</a></li><li class="dropdown-subitem"><a href="/zh/structures-algorithm/algorithm.html" class="nav-link">
+  限流熔断
+</a></li><li class="dropdown-subitem"><a href="/zh/structures-algorithm/algorithm.html" class="nav-link">
+  海量搜索
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="选择语言" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/plugin/official/plugin-blog.html" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/en/" class="nav-link">
+  English
+</a></li></ul></div></div> <a href="https://github.com/m9-lab/m9-lab.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>插件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/plugin/" class="sidebar-link">介绍</a></li><li><a href="/zh/plugin/using-a-plugin.html" class="sidebar-link">使用插件</a></li><li><a href="/zh/plugin/writing-a-plugin.html" class="sidebar-link">开发插件</a></li><li><a href="/zh/plugin/life-cycle.html" class="sidebar-link">生命周期</a></li><li><a href="/zh/plugin/option-api.html" class="sidebar-link">Option API</a></li><li><a href="/zh/plugin/context-api.html" class="sidebar-link">Context API</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>官方插件</span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vuepress-plugin-blog"><a href="#vuepress-plugin-blog" class="header-anchor">#</a> <a href="https://github.com/vuepressjs/vuepress-plugin-blog" target="_blank" rel="noopener noreferrer">@vuepress/plugin-blog<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h1> <h2 id="功能"><a href="#功能" class="header-anchor">#</a> 功能</h2> <ul><li><a href="https://vuepress-plugin-blog.ulivz.com/guide/getting-started.html#document-classifier" target="_blank" rel="noopener noreferrer"><strong>分类</strong><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>：强大的分类系统让你快速将贴文分类。</li> <li><a href="https://vuepress-plugin-blog.ulivz.com/guide/getting-started.html#pagination" target="_blank" rel="noopener noreferrer"><strong>分页</strong><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>： 极其简单的开箱即用的分页功能。</li> <li><a href="https://vuepress-plugin-blog.ulivz.com/client-api/" target="_blank" rel="noopener noreferrer"><strong>客户端 API</strong><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>: 透过客户端 API 轻松地写一个博客主题。</li></ul> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <p>在使用这个插件之前，我们强烈建议你先阅读 <a href="https://vuepress-plugin-blog.ulivz.com/guide/getting-started.html" target="_blank" rel="noopener noreferrer">Getting Started<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> -D @vuepress/plugin-blog
+<span class="token comment"># OR npm install -D @vuepress/plugin-blog</span>
+</code></pre></div><h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'@vuepress/blog'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>参考 <a href="https://vuepress-theme-blog.ulivz.com/" target="_blank" rel="noopener noreferrer">文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 来查看所有可用的选项。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/m9-lab/m9-lab.github.io/edit/master/docs/zh/plugin/official/plugin-blog.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2/15/2020, 6:59:16 AM</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.39c74953.js" defer></script><script src="/assets/js/5.696c01fa.js" defer></script><script src="/assets/js/36.1376cb54.js" defer></script>
+  </body>
+</html>

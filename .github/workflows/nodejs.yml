@@ -28,8 +28,8 @@ jobs:
     - name: VuePress
       run: |
         npm i -g yarn
-        yarn install
-        yarn build
+        ls -l && pwd
+        yarn && yarn build
         
     - name: Deploy
       run: |

@@ -26,8 +26,7 @@ module.exports = ctx => ({
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
   themeConfig: {
-    repo: 'm9rco/practice',
-    // 假如文档不是放在仓库的根目录下：
+    repo: 'm9-lab/m9-lab.github.io',
     docsRepo: 'm9-lab/m9-lab.github.io',
     docsBranch: 'master',
     editLinks: true,

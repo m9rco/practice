@@ -29,10 +29,6 @@ jobs:
         git config --global user.name 'pushaowei'
         git config --global user.email 'pushaowei0727@gmail.com'
 
-    - name: VuePressTest
-      run: |
-        ls -al && pwd
-
     - name: VuePress
       run: |
         yarn && yarn build

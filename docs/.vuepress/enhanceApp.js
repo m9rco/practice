@@ -24,7 +24,7 @@ function integrateGitalk(router) {
       commentsContainer.id = 'gitalk-container';
       commentsContainer.classList.add('content');
     }
-    const $page = document.querySelector('.page');
+    const $page = document.querySelector('.page-nav');
     if ($page) {
       $page.appendChild(commentsContainer);
       if (typeof Gitalk !== 'undefined' && Gitalk instanceof Function) {
@@ -35,8 +35,8 @@ function integrateGitalk(router) {
   function renderGitalk(fullPath) {
     const gitalk = new Gitalk({
       clientID: '5e01d05713fb81675776',
-      clientSecret: '599d38643f2c2fb15438c137f345a03fcb244b50', // come from github development
-      repo: 'practice',
+      clientSecret: '599d38643f2c2fb15438c137f345a03fcb244b50',
+      repo: 'm9-lab.github.io',
       owner: 'm9rco',
       admin: ['m9rco'],
       id: 'comment',

@@ -47,7 +47,7 @@ module.exports = ctx => ({
         sidebar: {
           '/zh/guide/': getGuideSidebar('指南', '深入'),
           '/zh/db/': getDbSidebar('关系型数据库','非关系型数据库','列数据库','文档型数据库','图数据库'),
-          '/zh/os/': ['','computer'],
+          '/zh/os/': getOsSidebar('操作系统','计算机原理'),
           '/zh/program/':getProgramSidebar('解释型语言','编译型语言')
         }
       },
@@ -90,6 +90,29 @@ module.exports = ctx => ({
     '.vuepress/nav/zh.js'
   ]
 })
+
+function getOsSidebar(argumentA,argumentB) {
+  return [
+    {
+      title: argumentA,
+      collapsable: false,
+      children: [
+        'io',
+        'cpu',
+        'thread',
+        'coroutines',
+        'process',
+      ]
+    },
+    {
+      title: argumentB,
+      collapsable: false,
+      children: [
+        'linux',
+      ]
+    },
+  ];
+}
 
 function getProgramSidebar(argumentA,argumentB) {
   return [

@@ -567,7 +567,7 @@ IO复用的优势并**不是对于单个连接能处理的更快**，而是单�
 - 服务器需要监听多个端口或处理多种服务
 - 服务器需要同时处理用户输入和网络连接
 
-## 信号驱动 I/O <Badge text="signal driven IO" type="tip" vertical="middle"/>
+## 信号驱动 I/O <Badge text="Signal driven IO" type="tip" vertical="middle"/>
 
 在信号驱动IO模型中，当用户线程发起一个IO请求操作，会给对应的socket注册一个信号函数，然后用户线程会继续执行，当内核数据就绪时会发送一个信号给用户线程，用户线程接收到信号后，便在信号函数中调用IO读写操作来进行实际的IO请求操作。
 

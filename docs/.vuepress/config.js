@@ -5,8 +5,8 @@ module.exports = ctx => ({
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: 'Practice',
-      description: '服务端架构师的自我修行'
+      title: '笃行',
+      description: '笃行致远，不负芳华'
     },
     '/en/': {
       lang: 'English',
@@ -46,7 +46,7 @@ module.exports = ctx => ({
         nav: require('./nav/zh'),
         sidebar: {
           '/zh/guide/': getGuideSidebar('指南', '深入'),
-          '/zh/db/': getDbSidebar('关系型数据库','非关系型数据库','列数据库','文档型数据库','图数据库'),
+          '/zh/db/': getDbSidebar('关系型数据库','键-值数据库','列数据库','文档型数据库','图数据库'),
           '/zh/os/': getOsSidebar('操作系统','计算机原理'),
           '/zh/program/':getProgramSidebar('解释型语言','编译型语言')
         }
@@ -150,7 +150,6 @@ function getDbSidebar (groupA, groupB, groupC, groupD,groupE) {
       title: groupB,
       collapsable: false,
       children: [
-        'mongodb',
         'redis',
       ]
     },

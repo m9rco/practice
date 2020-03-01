@@ -7,7 +7,7 @@
 
 本节包含了9种数据库的信息
 
-|      | MongoDB| counchDB  |Riak|Redis|PostgreSQL|Neo4J|HBase|Mysql|Clickhouse|
+|      | MongoDB| counchDB  |Riak|Redis|[PostgreSQL](./postgreSQL.html)|Neo4J|HBase|Mysql|Clickhouse|
 | ---- |:-----:| :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 |  类型    |文档 | 文档 |键-值 |键-值 |关系 |图 |列 |关系|列 |
 |  数据类型 | 有类型  | 有类型 | Blob |半类型 | 预定义且有类型 |无类型|预定义且有类型 |:x: |:x: |

@@ -1,27 +1,10 @@
-// 选择排序
 //
 // @author m9rco
 // @email <pushaowei0727@gmail.com>
-// @date 2020/3/1
+// @date 2020/3/15
 //
-
-#include "SortTestHelper.h"
-#include "algorithm"
-
-using namespace std;
-
-template<typename T>
-void selectionSort(T *arr, int n) {
-    for (int i = 0; i < n; i++) {
-        int minIndex = i;    // 寻找 [i, n] 区间里的最小值
-        for (int j = i + 1; j < n; j++) {
-            if (arr[j] < arr[minIndex]) {
-                minIndex = j;
-            }
-        }
-        swap(arr[i], arr[minIndex]);
-    }
-}
+#include "../SortTestHelper.h"
+#include "../SortingBasis.h"
 
 int main() {
     int n = 10000;

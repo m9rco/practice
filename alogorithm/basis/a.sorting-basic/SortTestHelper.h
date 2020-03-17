@@ -43,14 +43,15 @@ namespace SortTestHelper {
     }
 
     template<typename T>
-    void testSort(const string &sortName, void(*sort)(T[], int), T arr[], int n) {
+    void testSort(const string &sortName, void (*sort)(T[], int), T arr[], int n) {
         clock_t startTime = clock();
         sort(arr, n);
         clock_t endTime = clock();
         assert(isSorted(arr, n));
-
-        cout << sortName << ":\t" << double(endTime - startTime) / CLOCKS_PER_SEC << "s" << endl;
+        cout << sortName << " : " << double(endTime - startTime) / CLOCKS_PER_SEC << " s" << endl;
+        return;
     }
+
 
     int *generateNearlyOrderedArray(int n, int swapTimes) {
 
@@ -67,7 +68,7 @@ namespace SortTestHelper {
 
         return arr;
     }
-    
+
 
     int *copyIntArray(int a[], int n) {
         int *arr = new int[n];

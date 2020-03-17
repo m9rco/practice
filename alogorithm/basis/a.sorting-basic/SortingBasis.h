@@ -118,20 +118,44 @@ void mergeSort(T *arr, int n) {
 }
 
 template<typename T>
-void __mergeSortImprove(T *arr, int l, int r) {
-    if (l >= r) {
-        return;
+void mergeSortBottomUp(T *arr, int n) {
+    for (int i = 1; i <= n; i += i) {
+        for (int j = 0; j + i < n; j += i + i) {
+            // arr[j...j+i-1] arr[j+i...j+2*i-1]
+            __merge(arr, j, j + i - 1, min(j + i + i - 1, n - 1));
+        }
     }
-    int mid = (int) (l + r) / 2;
-    __mergeSort(arr, l, mid);
-    __mergeSort(arr, mid + 1, r);
-    __merge(arr, l, mid, r);
 }
 
 template<typename T>
-void mergeSortImprove(T *arr, int n) {
-    __mergeSortImprove(arr, 0, n - 1);
+int __quickPartition(T *arr, int left, int right) {
+    T index = arr[left];
+    int j = left;
+    for (int i = left + 1; i < right; i++) {
+        if (arr[i] < index) {
+            swap(arr[j + 1], arr[i]);
+            j++;
+        }
+    }
+    swap(arr[left], arr[j]);
+    return j;
 }
 
+
+template<typename T>
+void __quickSort(T *arr, int left, int right) {
+    if (left >= right) {
+        return;
+    }
+    int p = __quickPartition(arr, left, right);
+
+    __quickSort(arr, left, p - 1);
+    __quickSort(arr, p + 1, right);
+}
+
+template<typename T>
+void quickSort(T *arr, int n) {
+    __quickSort(arr, 0, n - 1);
+}
 
 #endif //SORTBASIS_SORTINGBASIS_H

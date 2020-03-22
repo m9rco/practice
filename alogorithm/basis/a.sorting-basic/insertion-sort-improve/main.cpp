@@ -12,10 +12,6 @@ int main() {
     int *arr2 = SortTestHelper::copyIntArray(arr, n);
     int *arr3 = SortTestHelper::copyIntArray(arr, n);
 
-    selectionSort(arr, n);
-    insertionSort(arr2, n);
-    insertionSortImprove(arr3, n);
-
     SortTestHelper::testSort("selectionSort", selectionSort, arr, n);
     SortTestHelper::testSort("insertionSort", insertionSort, arr2, n);
     SortTestHelper::testSort("insertionSortImprove", insertionSortImprove, arr3, n);

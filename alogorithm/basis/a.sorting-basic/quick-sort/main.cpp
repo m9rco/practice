@@ -8,17 +8,11 @@
 
 int main() {
     int n = 50000;
-    int *arr = SortTestHelper::generateNearlyOrderedArray(n, 0);
+    int *arr = SortTestHelper::generateRandomArray(n, 0, n);
     int *arr2 = SortTestHelper::copyIntArray(arr, n);
     int *arr3 = SortTestHelper::copyIntArray(arr, n);
     int *arr4 = SortTestHelper::copyIntArray(arr, n);
     int *arr5 = SortTestHelper::copyIntArray(arr, n);
-
-    quickSort(arr, n);
-    mergeSort(arr5, n);
-    insertionSort(arr2, n);
-    insertionSortImprove(arr3, n);
-    mergeSortBottomUp(arr4, n);
 
     SortTestHelper::testSort("quickSort", quickSort, arr, n);
     SortTestHelper::testSort("mergeSort", mergeSort, arr5, n);

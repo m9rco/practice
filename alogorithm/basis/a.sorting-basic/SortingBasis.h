@@ -21,6 +21,20 @@ void insertionSort(T *arr, int n) {
 }
 
 template<typename T>
+void insertionSort(T arr[], int l, int r) {
+    for (int i = l + 1; i <= r; i++) {
+        T e = arr[i];
+        int j;
+        for (j = i; j > l && arr[j - 1] > e; j--)
+            arr[j] = arr[j - 1];
+        arr[j] = e;
+    }
+
+    return;
+}
+
+
+template<typename T>
 void insertionSortImprove(T *arr, int n) {
     for (int i = 1; i < n; i++) {
         T e = arr[i];
@@ -131,10 +145,10 @@ template<typename T>
 int __quickPartition(T *arr, int left, int right) {
     T index = arr[left];
     int j = left;
-    for (int i = left + 1; i < right; i++) {
+    for (int i = left + 1; i <= right; i++) {
         if (arr[i] < index) {
-            swap(arr[j + 1], arr[i]);
             j++;
+            swap(arr[j], arr[i]);
         }
     }
     swap(arr[left], arr[j]);
@@ -154,8 +168,26 @@ void __quickSort(T *arr, int left, int right) {
 }
 
 template<typename T>
+void __quickSortImproveInsertion(T *arr, int left, int right) {
+    if (left >= right) {
+        return;
+    }
+    int p = __quickPartition(arr, left, right);
+
+    __quickSortImproveInsertion(arr, left, p - 1);
+    __quickSortImproveInsertion(arr, p + 1, right);
+}
+
+template<typename T>
 void quickSort(T *arr, int n) {
     __quickSort(arr, 0, n - 1);
 }
+
+template<typename T>
+void quickSortImproveInsertion(T *arr, int n) {
+    __quickSortImproveInsertion(arr, 0, n - 1);
+}
+
+
 
 #endif //SORTBASIS_SORTINGBASIS_H

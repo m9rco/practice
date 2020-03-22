@@ -10,5 +10,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 #set(SOURCE_FILES merge-sort-bottom-up/main.cpp )
 #set(SOURCE_FILES quick-sort/main.cpp )
-set(SOURCE_FILES quick-sort-improve-insertion/main.cpp )
+#set(SOURCE_FILES quick-sort-improve-insertion/main.cpp)
+#set(SOURCE_FILES quick-sort-improve-random/main.cpp)
+#set(SOURCE_FILES quick-sort-improve-random-v2/main.cpp)
+set(SOURCE_FILES quick-sort-improve-3way/main.cpp)
+
 add_executable(SortBasis ${SOURCE_FILES})

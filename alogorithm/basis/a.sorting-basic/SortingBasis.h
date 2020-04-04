@@ -224,7 +224,6 @@ void quickSortImproveRandom(T *arr, int n) {
     __quickSortImproveRandom(arr, 0, n - 1);
 }
 
-
 template<typename T>
 int __quickSortImproveRandomV2Partition(T *arr, int left, int right) {
     swap(arr[left], arr[rand() % (right - left + 1) + left]);

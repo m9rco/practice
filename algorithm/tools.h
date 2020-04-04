@@ -30,7 +30,7 @@ namespace FileOps {
         return ret;
     }
 
-    bool readFile(const string &filename, vector <string> &words) {
+    bool readFile(const string &filename, vector<string> &words) {
         string line;
         string contents = "";
         ifstream file(filename);
@@ -125,9 +125,11 @@ namespace Tools {
                 }
             }
             clock_t endTime = clock();
-            cout << "\n" << searchName << " : " << double(endTime - startTime) / CLOCKS_PER_SEC << " s"
-                 << "\n[needle: " << needle << "]"
-                 << "\n[num: " << *sst.search(needle) << "]"
+            cout << "\n♻️ " << searchName << " ♻️\n"
+                 << "───────|───────"
+                 << "\nspeed  │ " << double(endTime - startTime) / CLOCKS_PER_SEC << "s"
+                 << "\nneedle │ " << needle << ""
+                 << "\nnum    │ " << *sst.search(needle) << ""
                  << endl;
         }
         return;

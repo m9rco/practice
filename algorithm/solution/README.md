@@ -1,0 +1,1 @@
+# Record some algorithm solution of a class

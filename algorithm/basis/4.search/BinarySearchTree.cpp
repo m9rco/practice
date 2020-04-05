@@ -21,5 +21,27 @@
  */
 int main() {
     Tools::testSearchTree("BinarySearchTree", BinarySearchTree<string, int>(), "/tmp/bible.txt", "god");
+
+    BinarySearchTree<int, string> sst = BinarySearchTree<int, string>();
+    char as[1];
+
+    for (int i = 32; i <= 126; i++) {
+        sprintf(as, "%c", i);
+        int *res = reinterpret_cast<int *>(sst.search(i));
+        if (res == nullptr) {
+            sst.insert(i, as);
+        } else {
+            (*res)++;
+        }
+    }
+    cout << "\npreOrder" << endl;
+    sst.preOrder();
+
+    cout << "\nmiddleOrder" << endl;
+    sst.middleOrder();
+
+    cout << "\npostOrder" << endl;
+    sst.postOrder();
+
     return 0;
 }

@@ -74,6 +74,40 @@ private:
         }
     }
 
+    void preOrder(Node *node) {
+        if (node != nullptr) {
+            cout << node->key << "|" << node->value << endl;
+            preOrder(node->left);
+            preOrder(node->right);
+        }
+    }
+
+    void middleOrder(Node *node) {
+        if (node != nullptr) {
+            middleOrder(node->left);
+            cout << node->key << "|" << node->value << endl;
+            middleOrder(node->right);
+        }
+    }
+
+    void postOrder(Node *node) {
+        if (node != nullptr) {
+            postOrder(node->left);
+            postOrder(node->right);
+            cout << node->key << "|" << node->value << endl;
+        }
+    }
+
+    void destroy(Node *node) {
+        if (node != nullptr) {
+            destroy(node->left);
+            destroy(node->right);
+
+            delete node;
+            count--;
+        }
+    }
+
 public:
     BinarySearchTree() {
         root = nullptr;
@@ -81,7 +115,7 @@ public:
     }
 
     ~BinarySearchTree() {
-
+        destroy(root);
     }
 
     void insert(Key key, Value value) {
@@ -102,6 +136,22 @@ public:
 
     bool isEmpty() {
         return count == 0;
+    }
+
+    void preOrder() {
+        preOrder(root);
+    }
+
+    void middleOrder() {
+        middleOrder(root);
+    }
+
+    void postOrder() {
+        postOrder(root);
+    }
+
+    void destroy() {
+        destroy(root);
     }
 };
 

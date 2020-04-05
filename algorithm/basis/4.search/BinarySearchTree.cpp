@@ -43,5 +43,8 @@ int main() {
     cout << "\npostOrder" << endl;
     sst.postOrder();
 
+    cout << "\nlevelOrder" << endl;
+    sst.levelOrder();
+
     return 0;
 }

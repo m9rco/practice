@@ -10,6 +10,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <queue>
 
 using namespace std;
 
@@ -150,8 +151,21 @@ public:
         postOrder(root);
     }
 
-    void destroy() {
-        destroy(root);
+    void levelOrder() {
+        queue<Node *> q;
+        q.push(root);
+        while (!q.empty()) {
+            Node *node = q.front();
+            q.pop();
+            cout << node->key << "|" << node->value << endl;
+            if (node->left) {
+                q.push(node->left);
+            }
+            
+            if (node->right) {
+                q.push(node->right);
+            }
+        }
     }
 };
 

@@ -34,6 +34,9 @@ int main() {
             (*res)++;
         }
     }
+
+    sst.remove(98);
+
     cout << "\npreOrder" << endl;
     sst.preOrder();
 

@@ -27,8 +27,14 @@ private:
         Node(Key key, Value value) {
             this->key = key;
             this->value = value;
-            this->left = this->right = NULL;
+            this->left = this->right = nullptr;
         };
+
+        Node(Node *node) {
+            this->key = node->key;
+            this->value = node->value;
+            this->left = this->right = nullptr;
+        }
     };
 
     int count;
@@ -109,18 +115,79 @@ private:
         }
     }
 
-    Node *findMaxParent(Node *node) {
+    Node *findMaxNode(Node *node) {
         if (node->left == nullptr) {
             return node;
         }
-        return maxParent(node->left);
+        return findMaxNode(node->left);
     }
 
-    Node *findMinParent(Node *node) {
+    Node *findMinNode(Node *node) {
         if (node->right == nullptr) {
             return node;
         }
-        return minParent(node->right);
+        return findMinNode(node->right);
+    }
+
+    Node *removeMinNode(Node *node) {
+        if (node->left == nullptr) {
+            Node *nodeLeft = node->left;
+            delete node;
+            count--;
+            return nodeLeft;
+        }
+        node->left = removeMinNode(node->left);
+        return node;
+    }
+
+    Node *removeMaxNode(Node *node) {
+        if (node->right == nullptr) {
+            Node *nodeRight = node->right;
+            delete node;
+            count--;
+            return nodeRight;
+        }
+        node->right = removeMinNode(node->right);
+        return node;
+    }
+
+    Node *remove(Node *node, Key key) {
+        if (node == nullptr) {
+            return node;
+        }
+
+        if (key < node->key) {
+            node->left = remove(node->left, key);
+            return node;
+        }
+
+        if (key > node->key) {
+            node->right = remove(node->right, key);
+            return node;
+        }
+        // key == node->key
+        if (node->left == nullptr) {
+            Node *rightNode = node->right;
+            delete node;
+            count--;
+            return rightNode;
+        }
+        if (node->right == nullptr) {
+            Node *leftNode = node->left;
+            delete node;
+            count--;
+            return leftNode;
+        }
+
+        Node *resNode = new Node(findMinNode(node->right));
+        count++;
+
+        resNode->right = removeMinNode(node->right);
+        resNode->left = node->left;
+
+        delete node;
+        count--;
+        return resNode;
     }
 
 public:
@@ -182,12 +249,24 @@ public:
         }
     }
 
-    void maxParent() {
-        findMaxParent(root);
+    void findMaxNode() {
+        findMaxNode(root);
     }
 
-    void minParent() {
-        findMinParent(root);
+    void findMinNode() {
+        findMinNode(root);
+    }
+
+    void removeMinNode() {
+        removeMinNode(root);
+    }
+
+    void removeMaxNode() {
+        removeMaxNode(root);
+    }
+
+    void remove(Key key) {
+        root = remove(root, key);
     }
 };
 

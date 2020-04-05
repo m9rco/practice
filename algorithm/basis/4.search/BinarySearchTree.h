@@ -109,6 +109,20 @@ private:
         }
     }
 
+    Node *findMaxParent(Node *node) {
+        if (node->left == nullptr) {
+            return node;
+        }
+        return maxParent(node->left);
+    }
+
+    Node *findMinParent(Node *node) {
+        if (node->right == nullptr) {
+            return node;
+        }
+        return minParent(node->right);
+    }
+
 public:
     BinarySearchTree() {
         root = nullptr;
@@ -161,11 +175,19 @@ public:
             if (node->left) {
                 q.push(node->left);
             }
-            
+
             if (node->right) {
                 q.push(node->right);
             }
         }
+    }
+
+    void maxParent() {
+        findMaxParent(root);
+    }
+
+    void minParent() {
+        findMinParent(root);
     }
 };
 

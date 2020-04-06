@@ -13,6 +13,8 @@ add_executable(bso2 basis/3.sorting/SelectionSort.cpp)
 add_executable(bso3 basis/3.sorting/MergeSort.cpp)
 add_executable(bso4 basis/3.sorting/ShellSort.cpp)
 add_executable(bso5 basis/3.sorting/QuickSort.cpp)
+add_executable(bso6 basis/3.sorting/HeapSort.cpp)
+
 
 add_executable(bse0 basis/4.search/BinarySearch.cpp)
 add_executable(bse1 basis/4.search/BinarySearchTree.cpp)

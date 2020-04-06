@@ -14,6 +14,8 @@
 #include <vector>
 #include <fstream>
 
+using namespace std;
+
 namespace FileOps {
     int firstCharacterIndex(const string &s, int start) {
         for (int i = start; i < s.length(); i++)
@@ -59,7 +61,6 @@ namespace FileOps {
     }
 }
 namespace Tools {
-    using namespace std;
 
     int *generateRandomArray(int n, int rangeL, int rangeR) {
         assert(rangeL <= rangeR);
@@ -81,7 +82,7 @@ namespace Tools {
 
     template<typename T>
     bool isSorted(T arr[], int n) {
-        for (int i = 0; i < n - 1; ++i) {
+        for (int i = 0; i < n - 1; i++) {
             if (arr[i] > arr[i + 1]) {
                 return false;
             }
@@ -95,7 +96,11 @@ namespace Tools {
         sort(arr, n);
         clock_t endTime = clock();
         assert(isSorted(arr, n));
-        cout << sortName << " : " << double(endTime - startTime) / CLOCKS_PER_SEC << " s" << endl;
+        cout << "\n♻️ " << sortName << " ♻️\n"
+             << "───────|───────"
+             << "\nspeed  │ " << double(endTime - startTime) / CLOCKS_PER_SEC << "s"
+             << "\nnum    │ " << n << ""
+             << endl;
         return;
     }
 

@@ -181,20 +181,20 @@ namespace HeapSort {
 
     template<typename T>
     void ascSort(T arr[], int n) {
-        MaxHeap<T> maxheap = MaxHeap<T>(arr, n);
+        MaxHeap<T> maxHeap = MaxHeap<T>(arr, n);
         for (int i = n - 1; i >= 0; i--)
-            arr[i] = maxheap.extractMax();
+            arr[i] = maxHeap.extractMax();
 
     }
 
     template<typename T>
     void ascSortImprove(T arr[], int n) {
-        MaxHeap<T> maxheap = MaxHeap<T>(n);
+        MaxHeap<T> maxHeap = MaxHeap<T>(n);
         for (int i = 0; i < n; i++)
-            maxheap.insert(arr[i]);
+            maxHeap.insert(arr[i]);
 
         for (int i = n - 1; i >= 0; i--)
-            arr[i] = maxheap.extractMax();
+            arr[i] = maxHeap.extractMax();
 
     }
 };

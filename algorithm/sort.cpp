@@ -18,6 +18,7 @@ int main() {
     int *ra1 = Tools::copyIntArray(ra0, n);
     int *ra2 = Tools::copyIntArray(ra0, n);
 
+    cout << "\n === 2^16 random array === \n" << endl;
     // O(n^2)
     testSort("BubbleSort", BubbleSort::ascSort, ra0, n);
     testSort("SelectionSort", SelectionSort::ascSort, ra1, n);

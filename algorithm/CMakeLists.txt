@@ -4,6 +4,8 @@ project(Algorithm)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 #=====================================================================@
+add_executable(m sort.cpp)
+
 
 add_executable(bso0 basis/3.sorting/BubbleSort.cpp)
 add_executable(bso1 basis/3.sorting/InsertionSort.cpp)

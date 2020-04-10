@@ -6,10 +6,9 @@
 
 #include "InsertionSort.h"
 #include "../../tools.h"
-#include <cmath>
 
 int main() {
-    int n = pow(2, 16);
+    int n = 20;
     int *arr = Tools::generateRandomArray(n, 0, n);
     int *arr2 = Tools::copyIntArray(arr, n);
 

@@ -43,7 +43,7 @@ namespace InsertionSort {
             arr[j] = effect;
         }
     }
-};
+}
 
 
 #endif //ALGORITHM_INSERTIONSORT_H

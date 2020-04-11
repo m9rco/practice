@@ -24,3 +24,4 @@ add_executable(bse2 basis/4.search/SequenceSearchTree.cpp)
 
 add_executable(leetcode151 leetcode/_151_ReverseWords.cpp)
 add_executable(leetcode283 leetcode/_283_MoveZeroes.cpp)
+add_executable(leetcode887 leetcode/_887_SuperEggDrop.cpp)

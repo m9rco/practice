@@ -90,6 +90,27 @@ namespace Tools {
         return true;
     }
 
+    template<class unionFunc>
+    void testUnionFind(const string &unionName, unionFunc uf, int n) {
+        srand(time(NULL));
+        clock_t startTime = clock();
+        for (int i = 0; i < n; i++) {
+            int a = rand() % n;
+            int b = rand() % n;
+            uf.unionElements(a, b);
+        }
+        for (int i = 0; i < n; i++) {
+            int a = rand() % n;
+            int b = rand() % n;
+            uf.isConnected(a, b);
+        }
+        clock_t endTime = clock();
+        cout << "\n♻️ " << " " << unionName << " " << double(endTime - startTime) / CLOCKS_PER_SEC << " s"
+             << endl;
+        return;
+    }
+
+
     template<typename T>
     void testSort(const string &sortName, void (*sort)(T[], int), T arr[], int n) {
         clock_t startTime = clock();

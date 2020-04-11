@@ -20,6 +20,9 @@ add_executable(bse0 basis/4.search/BinarySearch.cpp)
 add_executable(bse1 basis/4.search/BinarySearchTree.cpp)
 add_executable(bse2 basis/4.search/SequenceSearchTree.cpp)
 
+add_executable(bun0 basis/5.union-find/UnionFindForSize.cpp)
+add_executable(bun1 basis/5.union-find/UnionFindForRank.cpp)
+add_executable(bun2 basis/5.union-find/UnionFindForPathCompression.cpp)
 
 
 add_executable(leetcode151 leetcode/_151_ReverseWords.cpp)

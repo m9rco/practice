@@ -24,6 +24,8 @@ add_executable(bun0 basis/5.union-find/UnionFindForSize.cpp)
 add_executable(bun1 basis/5.union-find/UnionFindForRank.cpp)
 add_executable(bun2 basis/5.union-find/UnionFindForPathCompression.cpp)
 
+add_executable(bgr0 basis/6.graph/DenseGraph.cpp)
+add_executable(bgr1 basis/6.graph/SparseGraph.cpp)
 
 add_executable(leetcode151 leetcode/_151_ReverseWords.cpp)
 add_executable(leetcode283 leetcode/_283_MoveZeroes.cpp)

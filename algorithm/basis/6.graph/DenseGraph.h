@@ -9,6 +9,7 @@
 
 #include "vector"
 #include "cassert"
+#include "iostream"
 
 using namespace std;
 
@@ -53,6 +54,14 @@ public:
         assert(v >= 0 && v < vertex);
         assert(w >= 0 && w < vertex);
         return g[v][w];
+    }
+
+    void show() {
+        for (int i = 0; i < vertex; i++) {
+            for (int j = 0; j < vertex; j++)
+                cout << g[i][j] << "\t";
+            cout << endl;
+        }
     }
 
     class adjIterator {

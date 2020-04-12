@@ -9,6 +9,7 @@
 
 #include "vector"
 #include "cassert"
+#include "iostream"
 
 using namespace std;
 
@@ -55,6 +56,15 @@ public:
             if (i == w) return true;
         }
         return false;
+    }
+
+    void show() {
+        for (int i = 0; i < vertex; i++) {
+            cout << "vertex " << i << ":\t";
+            for (int j = 0; j < g[i].size(); j++)
+                cout << g[i][j] << "\t";
+            cout << endl;
+        }
     }
 
     class adjIterator {

@@ -27,6 +27,8 @@ add_executable(bun2 basis/5.union-find/UnionFindForPathCompression.cpp)
 add_executable(bgr0 basis/6.graph/DenseGraph.cpp)
 add_executable(bgr1 basis/6.graph/SparseGraph.cpp)
 add_executable(bgr2 basis/6.graph/ReadGraph.cpp)
+add_executable(bgr3 basis/6.graph/Components.cpp)
+add_executable(bgr4 basis/6.graph/Edge.cpp)
 
 add_executable(leetcode151 leetcode/_151_ReverseWords.cpp)
 add_executable(leetcode283 leetcode/_283_MoveZeroes.cpp)

@@ -4,6 +4,11 @@ project(Algorithm)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 #=====================================================================@
+add_executable(bos0 basis/0.os/IOSelect.cpp)
+add_executable(bos1 basis/0.os/IOBlock.cpp)
+add_executable(bos2 basis/0.os/IONonBlock.cpp)
+
+#=====================================================================@
 add_executable(m sort.cpp)
 
 

@@ -42,6 +42,8 @@ add_executable(solution3 solution/ArrayOperation.cpp)
 add_executable(solution4 solution/MonsterDrink.cpp)
 add_executable(solution5 solution/ApplyFund.cpp)
 add_executable(solution6 solution/SlowCrawler.cpp)
+add_executable(solution7 solution/IntegerSequence.cpp)
+add_executable(solution8 solution/KLevelStage.cpp)
 
 add_executable(leetcode151 leetcode/_151_ReverseWords.cpp)
 add_executable(leetcode283 leetcode/_283_MoveZeroes.cpp)
